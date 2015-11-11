@@ -1,0 +1,9 @@
+Time-variant Linear Threshold Model:
+
+This model is based on Linear Threshold Model.
+Each node has a threshold in the range [0, 1].
+Each node's activeness is represented using a real number in the range [0, 1].
+Each node has a time decreasing activeness sequence.
+Each node can be set to be activated more than once.
+The influence of one node to its neighbor is based on the number of their common friends.
+
