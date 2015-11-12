@@ -1,0 +1,12 @@
+
+In this model:
+
+1. for each iteration, if a node n is active, there is a probability p such that n become inactive forever (lose interest). 
+The probability p becomes larger as time iteration increases.
+
+2. for each node that haven't been infected, the more its neighbours being infected, the higher probability it is also infected.
+As time iteration increases, it becomes less likely that it's infected.
+
+3. We will create a plot in this model of time iteration versus the total number of infected nodes in the graph. 
+Finally we will see in how many iterations the number of infected node will drop down to 0 again.
+
