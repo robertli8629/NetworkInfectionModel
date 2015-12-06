@@ -19,9 +19,8 @@ class LTM(object):
 			triggers[node] = 0
 			activelevel[node] = -1
 		for node in initSet:
-			if triggers[node] < self.triggers[node]:
-				triggers[node] += 1
-				activelevel[node] = 0
+			triggers[node] += 1
+			activelevel[node] = 0
 		activeNodes.append(len(initSet))
 
 		while time > 0:
