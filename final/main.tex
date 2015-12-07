@@ -165,7 +165,7 @@ A good choice of maximizing the influence is the greedy algorithm. In this secti
 The objective function $f(I)$ is submodular. i.e. for all $A\subset B\subset V$ and $s\in V\backslash B$, $f(A\cup{s})-f(A)\geq f(B\cup{s})-f(B)$
 \end{theorem}
 \begin{proof}
-For a fixed influence i, the objective function is equivalent to set paths by probability in advance and set active time by probability in advance. Since $A\subset B$,　we have $H(A)\subset H(B)$, and thus $H(u)\cap H(A)\subset H(u)\cap H(B)$, $H(u)\setminus H(A)\supset H(u)\setminus H(B)$. Therefore, the gain of adding u to A is larger than adding u to B. Since the active time for each node is determined and is greater or equal than 0, the overall active time increase also have the property.
+For a fixed influence i, the objective function is equivalent to set paths by probability in advance and set active time by probability in advance. Since $A\subset B$, we have $H(A)\subset H(B)$, and thus $H(u)\cap H(A)\subset H(u)\cap H(B)$, $H(u)\setminus H(A)\supset H(u)\setminus H(B)$. Therefore, the gain of adding u to A is larger than adding u to B. Since the active time for each node is determined and is greater or equal than 0, the overall active time increase also have the property.
 
 Since $f_i$ is submodular, $f$ is also submodular.
 \end{proof}
@@ -213,55 +213,108 @@ A simulation of this extended model over the facebook dataset is provided below:
 \end{figure}
 
 \section{Time-variant Linear Threshold Model}
+
+\subsection{Model \& Metric}
 To simulate the evolution of active nodes in social network, we propose a time-variant linear threshold model based on the linear threshold model, which is described as follows:
 
-i. The model is based on a graph where an edge from A to B indicates A has influence on B. The influence is proportional to the number of common friends (undirected graph) or followers (directed graph) of A and B. It’s normalized so that the influence a node receives from other nodes sums up to 1.
+\begin{enumerate}
+\item The model is based on a graph where an edge from $i$ to $j$ indicates $i$ has influence on $j$. The influence value $I_{ij}$ is proportional to the number of common friends (undirected graph like Facebook) or followers (directed graph like Twitter) of $i$ and $j$. It's normalized so that the influence a node receives from other nodes sums up to 1, i.e. $\sum_{i \in j\text{'s neighbors}} I_{ij} = 1$.
 
-ii. Each node has an activeness sequence, which is a nonincreasing sequence of numbers in the range [0, 1]. Once a node is activated, the starting activeness of the node becomes the first number of its activeness sequence. Then, after a time step, its activeness becomes the second number of its activeness sequence and so forth until its activeness reaches the end of the sequence and then deactivated. For inactive nodes, their activeness are 0.
+\item Each node $i$ has an activeness sequence, which is a non-increasing sequence of real numbers in the range $(0, 1]$, i.e. $\{A_{ik}\}, k \in \{1, 2, ..., l_i\}$ where $1 \geq A_{i1} \geq A_{i2} \geq \cdots \geq A_{il_i} > 0$. Once node $i$ is activated, the starting activeness of the node is $A_{i1}$. Then, after a time step, its activeness becomes $A_{i2}$ and so forth until its activeness reaches the end of the sequence ($A_{il_i}$) and then deactivated. For inactive nodes, their activeness are 0. $l_i$ is the length of the activeness sequence of node $i$ and let's call this active time.
 
-iii. Each node has a threshold in the range [0, 1].  At each time step, for any node A, it receives activeness from all nodes that have an influence on A. The activeness it receives is the sum of the product of its neighbor’s activeness and influence on A. If the activeness A receives exceeds its threshold and A was inactive, then A is activated.
+\item Each node $j$ has a threshold $T_j$ in the range [0, 1].  At each time step, for any node $j$, it receives activeness from its neighbors. The activeness it receives is $\sum_{i \in j\text{'s neighbors}} A_iI_{ij}$ where $A_i$ is the activeness of node $i$ in the last time step. If $\sum_{i \in j\text{'s neighbors}} A_iI_{ij} > T_j$ and node $j$ was inactive, then node $j$ is activated.
 
-iv. Each node has an upper bound of times to be activated. This allows a node to be triggered for more than once, which might not be as useful as other features but still helps us analyze the information spread in social network. In most cases, the upper bound of times to be activated is 1, i.e. any node can be activated at most once.
+\item Each node $i$ has an upper bound of times to be activated ($U_i$) and let's call this activation upper bound. This allows a node to be activated for more than once. In default, the activation upper bound is 1, i.e. any node can be activated at most once.
+\end{enumerate}
 
-Based on the above general description, by setting the activeness sequence to infinite ones and the upper bound of times to be activated to one, this model is exactly the same as the original linear threshold model. Hence, this is a general version of linear threshold model and we can gain some insights by comparing with the original model. Moreover, in this model, we focus on the evolution of active nodes in the network instead of the total number of nodes that have been activated. This is more suitable for the case where time matters. For example, many online games charge players based on the playing time and thus the integral of active players is more indicative than the total number of players that have played this game for revenue estimation.
+Based on the above description, by setting $\forall i, l_i = \infty, 1 = A_{i1} = A_{i2} = \cdots, U_i = 1$, this model is exactly the same as the original linear threshold model. Hence, this is a general version of linear threshold model and we can gain some insights by comparing with the original model.
 
-To test our model, we use the ego-Facebook network data, which is an undirected graph. For simplicity, the initial set consists of users with highest number of friends (let’s call them influencers). For all nodes, the default threshold is 0.1; the default activeness sequence is 10 ones; the default size of the initial set is 10; the default upper bound of times to be activated is 1. Following are some simulation results by tweaking one of the above parameters:
+In this model, we focus on the evolution of active nodes in the network instead of the total number of nodes that have been activated. To be specific, the metric for this model is the integral of number of active nodes of all time. This is more suitable for the case where reward is proportional to the length of time. For example, many online games charge players based on the playing time and thus the integral of active players is more indicative than the total number of players that have played this game for revenue estimation.
 
+\subsection{Tests}
 
+To test our model, we use the ego-Facebook network data, which is an undirected graph (refer to section 3 for basic statistics and visualization of this network). For simplicity, the initial set consists of users with highest degrees (let's call them influencers). The default settings are $\forall i, T_i = 0.1, l_i = 10, 1 = A_{i1} = \cdots = A_{i10}, U_i = 1$. Following are some simulation results by tweaking one of the above parameters:
 
-In Fig 5, we plot the number of active nodes using different thresholds (all nodes with the same threshold). In general, when threshold increases, the number of active nodes reduces, which is reasonable because nodes are more difficult to be activated.
-
-In Fig 6, we plot the number of active nodes using different activeness sequences. For example, if the active time is 4, the activeness sequence is 4 ones for all nodes. When active time increases, it takes longer before all nodes become inactive and the peak number of active nodes increases.
-
-In Fig 7, we plot the number of active nodes using different size of initial set, i.e. the number of influencers. In general, when the initial set increases, the number of active nodes increases. Also notice that there’s a gap between 20 influencers and 25 influencers, which is because the graph is not connected and choosing nodes in different connected components helps increases the number of active nodes.
-
-In Fig 8, we plot the number of active nodes using different upper bound of times to be activated for all nodes. We can find the periodical change in number of active nodes in cases where the upper bound is larger than 1 and the period is 10, which is exactly the length of our default activeness sequence.
-
-The above results and analysis shows the appropriateness of this model. In the future, we will dig into algorithms to find the initial set that achieves better performance in the evolution of active nodes.
-
-\begin{figure}[H]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=7.5cm]{yzplot1.png}
-\caption{different plots in Time-variant Linear Threshold Model}
+\caption{Plot for different thresholds}
+\label{threshold}
 \end{figure}
 
-\begin{figure}[H]
+In Figure \ref{threshold}, we plot the number of active nodes using different thresholds (all nodes with the same threshold). In general, when threshold increases, the number of active nodes reduces, which is reasonable because nodes are more difficult to be activated.
+
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=7.5cm]{yzplot2.png}
-\caption{different plots in Time-variant Linear Threshold Model}
+\caption{Plot for different active times}
+\label{activelength}
 \end{figure}
 
-\begin{figure}[H]
+In Figure \ref{activelength}, we plot the number of active nodes using different active times (activeness values are all 1). When active time increases, it takes longer before all nodes become inactive and the peak shifts right.
+
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=7.5cm]{yzplot3.png}
-\caption{different plots in Time-variant Linear Threshold Model}
+\caption{Plot for different sizes of initial set}
+\label{size}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=7.5cm]{yzplot4.png}
-\caption{different plots in Time-variant Linear Threshold Model}
+\caption{Plot for different activation upper bounds}
+\label{trigger}
 \end{figure}
+
+In Figure \ref{size}, we plot the number of active nodes using different sizes of initial set, i.e. the number of influencers. In general, when the initial set increases, the number of active nodes increases.
+
+In Figure \ref{trigger}, we plot the number of active nodes using different trigger upper bounds. We can find the periodical change in number of active nodes in cases where the activation upper bound is larger than 1 and the period is 10, which is exactly the length of our default activeness sequence.
+
+\subsection{Analysis \& Algorithms}
+
+In this new model, our goal is to maximize the integral of number of active nodes over different initial sets with a given size. In the original linear threshold model, the metric is the total number of nodes that have been activated, which is proved to be a submodular function of the initial set [4]. Thus, greedy algorithm guarantees $(1 - 1/e)$ performance of the optimal solution [4].
+
+However, the integral of number of active nodes is not submodular in the initial sets and hence greedy algorithm is not guaranteed to perform well. What's more, the scale of our data doesn't allow us to apply greedy algorithm (3963 nodes and 176312 edges) even for the singleton initial set (initial set containing only one node) because we need to enumerate all nodes, which means 3963 simulations where each one takes a few seconds.
+
+We need to come up with other efficient algorithms to do this. Unfortunately, mathematical analysis for this problem is limited and therefore, we propose some heuristics and compare their performances in the simulation section.
+
+The first one is the top degree heuristic, i.e. choosing nodes with highest degrees as the initial set, which we already mentioned in the previous section. This heuristic is too raw and it doesn't take the influences between nodes into consideration. For node $i$, define sum influence as $I_i = \sum_{j \in i\text{'s neighbors}} I_{ij}$, which is the sum of influences of $i$ on its neighbors. Intuitively, when $I_i$ is higher, node $i$ is more important in information spread. Based on this, we propose the top sum influence heuristic, which chooses nodes with highest sum influences as the initial set. We find that the top 10 nodes based on sum influence is exactly the 10 egos in the ego-Facebook network data, which shows that top influence heuristic is able to find the true influencers. However, top sum influence heuristic doesn't take time-related parameters into consideration. For any node $i$, during the period when $i$ is active, the total influence that $i$ spreads to its neighbors is $I_i \cdot \sum_{k=1}^{l_i} A_{ik}$ and let's call this cumulative influence. The top cumulative influence heuristic is choosing top nodes based on cumulative influence as the initial set.
+
+\subsection{Simulation Results}
+
+Based on the three heuristics proposed in the previous section, we run the simulation and compare their performances. For any node $i$, we set activation upper bound $U_i = 1$ and active time $l_i$ to a random integer in the range $[5, 15]$ where activeness values are all ones. For each of following simulation results, we average over 100 different models to reduce the effect of randomness (the only difference is the active time for nodes).
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=7.5cm]{yzplot5.png}
+\caption{An example comparison of three heuristics}
+\label{example}
+\end{figure}
+
+In Figure \ref{example}, we show an example simulation of three heuristics, from which we can see top sum influence heuristic and top cumulative influence heuristic outperforms the top degree heuristic. What's more, the difference between top sum influence heuristic and top cumulative influence heuristic is negligible.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=7.5cm]{yzplot6.png}
+\caption{Performance plot using different thresholds with init set size 50}
+\label{pthreshold}
+\end{figure}
+
+In Figure \ref{pthreshold}, we fix the initial set size to 50 and compare the performances using different thresholds for all nodes. As expected, when the threshold increases, the integral of activated nodes reduces. The gap between top degree heuristic and the other two algorithms is the largest when threshold is 0.3.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=7.5cm]{yzplot7.png}
+\caption{Performance plot using different initial set sizes with threshold 0.5}
+\label{psize}
+\end{figure}
+
+In Figure \ref{psize}, we fix the threshold to 0.5 and compare the performances using different initial set sizes. We can see there's a gap between top degree heuristic and the other two algorithms while the difference between the other two algorithms is still very small.
+
+\subsection{Conclusion}
+
+From the above simulation results, we can conclude that among the three heuristics, the top degree heuristic is the worst, which only involves degree information. The performance of the other two algorithms are very close and they outperform the top degree heuristic. To make use of the time-related parameters, we can further generalize the top cumulative influence heuristic to an algorithm that chooses top nodes based on $f(I_i, \sum_{k=1}^{l_i} A_{ik})$ where $f(\cdot)$ could be any function. We can consider $I_i$ and $\sum_{k=1}^{l_i} A_{ik}$ as features and treat this as a machine learning problem and we should achieve an algorithm that outperforms the top sum influence heuristic because this algorithm is also a special case of the above general algorithm. In the future, we need more mathematical analysis for this problem and achieve better algorithms other than heuristics.
 
 \section{Summary}
 We have constructed different models for predicting time-variant influence spread: the simple probablistic model and the time-variant linear threshold model. From the mathematical and simulation analysis, we have seen that both models are valid assumptions about how influence can spread over time in a real world situation. 

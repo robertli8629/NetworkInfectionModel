@@ -1,48 +1,42 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.10.8)  2 DEC 2015 17:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  6 DEC 2015 17:07
 entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
 **main.tex
-(C:\cs224w\project\milestone\main.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, classicl
-atin, coptic, croatian, czech, danish, dutch, esperanto, estonian, farsi, finni
-sh, french, galician, german, german-x-2014-05-21, greek, gujarati, hindi, hung
-arian, icelandic, indonesian, interlingua, irish, italian, kannada, kurmanji, l
-atin, latvian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogre
-ek, ngerman, ngerman-x-2014-05-21, nynorsk, oriya, panjabi, pinyin, polish, por
-tuguese, romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swed
-ish, swissgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppers
-orbian, usenglishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+(./main.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2014/04/30 v1.2b Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -192,7 +186,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -223,7 +217,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -246,50 +240,49 @@ Now handling font encoding U ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-))
-(C:\cs224w\project\milestone\acl2015.sty
+)) (./acl2015.sty
 Conference Style for ACL 2015 -- released December 7, 2014
 \titlebox=\skip43
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen103
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count88
+\inf@bad=\count87
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count89
-\leftroot@=\count90
+\uproot@=\count88
+\leftroot@=\count89
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count91
-\DOTSCASE@=\count92
+\classnum@=\count90
+\DOTSCASE@=\count91
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -298,15 +291,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen105
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count93
-\c@MaxMatrixCols=\count94
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
 \dotsspace@=\muskip11
-\c@parentequation=\count95
-\dspbrk@lvl=\count96
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
 \tag@help=\toks17
-\row@=\count97
-\column@=\count98
-\maxfields@=\count99
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
 \andhelp@=\toks18
 \eqnshift@=\dimen106
 \alignsep@=\dimen107
@@ -321,7 +314,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks21
 \thm@bodyfont=\toks22
@@ -333,78 +326,80 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip49
 \dth@everypar=\toks26
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithms\algorithm.sty"
-Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count100
+\c@float@type=\count99
 \float@exts=\toks27
 \float@box=\box28
 \@float@everytoks=\toks28
 \@floatcapt=\box29
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks29
-\c@algorithm=\count101
+\c@algorithm=\count100
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count102
-\c@ALG@rem=\count103
-\c@ALG@nested=\count104
+\c@ALG@line=\count101
+\c@ALG@rem=\count102
+\c@ALG@nested=\count103
 \ALG@tlm=\skip50
 \ALG@thistlm=\skip51
-\c@ALG@Lnr=\count105
-\c@ALG@blocknr=\count106
-\c@ALG@storecount=\count107
-\c@ALG@tmpcounter=\count108
+\c@ALG@Lnr=\count104
+\c@ALG@blocknr=\count105
+\c@ALG@storecount=\count106
+\c@ALG@tmpcounter=\count107
 \ALG@tmplength=\skip52
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks30
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: xetex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.9\tex\xelatex\xetex-def\xetex.def"
-File: xetex.def 2015/09/11 v4.06 LaTeX color/graphics driver for XeTeX (TeX Liv
-e/RRM/JK)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)))
+)
+\Gread@gobject=\count108
+))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
 \c@theorem=\count109
 
-(C:\cs224w\project\milestone\main.aux)
+(./main.aux)
+\openout1 = `main.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
@@ -418,109 +413,195 @@ LaTeX Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 44.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-Requested font "ptmr7t" at 10.0pt
-Requested font "ptmr7t" at 14.4pt
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count110
+\scratchdimen=\dimen114
+\scratchbox=\box30
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen115
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks32
+) (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
-Requested font "ptmb7t" at 14.4pt
-Requested font "ptmr7t" at 12.0pt
-Requested font "cmr12" at 12.0pt
-Requested font "cmr8" at 8.0pt
-Requested font "cmr6" at 6.0pt
-Requested font "cmmi12" at 12.0pt
-Requested font "cmmi8" at 8.0pt
-Requested font "cmmi6" at 6.0pt
-Requested font "cmsy10" at 12.0pt
-Requested font "cmsy8" at 8.0pt
-Requested font "cmsy6" at 6.0pt
-Requested font "cmex10" at 12.0pt
-Requested font "cmex8" at 8.0pt
-Requested font "cmex7" at 6.0pt
 LaTeX Font Info:    Try loading font information for U+lasy on input line 45.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Requested font "lasy10" at 12.0pt
-Requested font "lasy8" at 8.0pt
-Requested font "lasy6" at 6.0pt
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 45.
-Requested font "ptmb7t" at 12.0pt
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no ” in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Missing character: There is no ” in font ptmr7t!
-Missing character: There is no ’ in font ptmr7t!
-Requested font "cmex7" at 7.0pt
-Requested font "cmex7" at 5.0pt
-Requested font "lasy10" at 10.0pt
-Requested font "lasy7" at 7.0pt
-Requested font "lasy5" at 5.0pt
-Requested font "ptmr7t" at 7.0pt
-Requested font "ptmr7t" at 5.0pt
-Missing character: There is no — in font ptmr7t!
-Missing character: There is no — in font ptmr7t!
 
 Underfull \vbox (badness 1817) has occurred while \output is active []
 
- [1
+ [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
-Requested font "ptmb7t" at 10.0pt
-File: graph.png Graphic file (type QTm)
 
-<use  "graph.png" >
-File: out-degree-distr.png Graphic file (type QTm)
- <use  "out-degree-distr.png" >
-Missing character: There is no ’ in font ptmr7t!
-Missing character: There is no ’ in font ptmr7t!
-Missing character: There is no ’ in font ptmr7t!
- [2]
-File: simple-plot.png Graphic file (type QTm)
+<graph.png, id=14, 458.46281pt x 369.63094pt>
+File: graph.png Graphic file (type png)
+ <use graph.png>
+Package pdftex.def Info: graph.png used on input line 86.
+(pdftex.def)             Requested size: 199.16928pt x 160.57947pt.
 
-<use  "simple-plot.png" >
-Requested font "ptmri7t" at 10.0pt
-Missing character: There is no 　 in font ptmr7t!
- [3]
+<out-degree-distr.png, id=15, 752.8125pt x 602.25pt>
+File: out-degree-distr.png Graphic file (type png)
+
+<use out-degree-distr.png>
+Package pdftex.def Info: out-degree-distr.png used on input line 92.
+(pdftex.def)             Requested size: 199.16928pt x 159.33818pt.
+ [2 <./graph.png> <./out-degree-distr.png>]
+<simple-plot.png, id=24, 589.0005pt x 444.4605pt>
+File: simple-plot.png Graphic file (type png)
+ <use simple-plot.png>
+Package pdftex.def Info: simple-plot.png used on input line 135.
+(pdftex.def)             Requested size: 213.39566pt x 161.02972pt.
+
+[3 <./simple-plot.png>]
 Underfull \hbox (badness 2922) in paragraph at lines 186--187
 []\OT1/ptm/m/n/10 Because com-put-ing ob-jec-tive func-tion is time-
  []
 
-File: influence_max.png Graphic file (type QTm)
-<use  "influence_max.png" >
-File: plotfb.png Graphic file (type QTm)
- <use  "plotfb.png" >
-Missing character: There is no ’ in font ptmr7t!
-Missing character: There is no ’ in font ptmr7t!
- [4]
-Missing character: There is no ’ in font ptmr7t!
-Missing character: There is no ’ in font ptmr7t!
-File: yzplot1.png Graphic file (type QTm)
- <use  "yzplot1.png" >
-File: yzplot2.png Graphic file (type QTm)
+<influence_max.png, id=31, 589.0005pt x 444.4605pt>
+File: influence_max.png Graphic file (type png)
+ <use influence_max.png>
+Package pdftex.def Info: influence_max.png used on input line 190.
+(pdftex.def)             Requested size: 213.39566pt x 161.02972pt.
 
-<use  "yzplot2.png" >
-File: yzplot3.png Graphic file (type QTm)
- <use  "yzplot3.png" >
-File: yzplot4.png Graphic file (type QTm)
- <use  "yzplot4.png" > [5] [6]
-(C:\cs224w\project\milestone\main.aux) ) 
+<plotfb.png, id=32, 578.16pt x 433.62pt>
+File: plotfb.png Graphic file (type png)
+ <use plotfb.png>
+Package pdftex.def Info: plotfb.png used on input line 211.
+(pdftex.def)             Requested size: 213.39566pt x 160.04651pt.
+ [4 <./influence_max.png> <./plotfb.png>] <yzplot1.png, id=38, 578.16pt x 433.6
+2pt>
+File: yzplot1.png Graphic file (type png)
+
+<use yzplot1.png>
+Package pdftex.def Info: yzplot1.png used on input line 240.
+(pdftex.def)             Requested size: 213.39566pt x 160.04651pt.
+ <yzplot2.png, id=39, 578.16pt x 433.62pt>
+File: yzplot2.png Graphic file (type png)
+ <use yzplot2.png>
+Package pdftex.def Info: yzplot2.png used on input line 249.
+(pdftex.def)             Requested size: 213.39566pt x 160.04651pt.
+
+<yzplot3.png, id=40, 578.16pt x 433.62pt>
+File: yzplot3.png Graphic file (type png)
+ <use yzplot3.png>
+Package pdftex.def Info: yzplot3.png used on input line 258.
+(pdftex.def)             Requested size: 213.39566pt x 160.04651pt.
+
+<yzplot4.png, id=41, 578.16pt x 433.62pt>
+File: yzplot4.png Graphic file (type png)
+ <use yzplot4.png>
+Package pdftex.def Info: yzplot4.png used on input line 265.
+(pdftex.def)             Requested size: 213.39566pt x 160.04651pt.
+ [5 <./yzplot1.png> <./yzplot2.png> <./yzplot3.png> <./yzplot4.png>]
+<yzplot5.png, id=49, 578.16pt x 433.62pt>
+File: yzplot5.png Graphic file (type png)
+ <use yzplot5.png>
+Package pdftex.def Info: yzplot5.png used on input line 290.
+(pdftex.def)             Requested size: 213.39566pt x 160.04651pt.
+
+<yzplot6.png, id=50, 578.16pt x 433.62pt>
+File: yzplot6.png Graphic file (type png)
+ <use yzplot6.png>
+Package pdftex.def Info: yzplot6.png used on input line 299.
+(pdftex.def)             Requested size: 213.39566pt x 160.04651pt.
+
+<yzplot7.png, id=51, 578.16pt x 433.62pt>
+File: yzplot7.png Graphic file (type png)
+ <use yzplot7.png>
+Package pdftex.def Info: yzplot7.png used on input line 308.
+(pdftex.def)             Requested size: 213.39566pt x 160.04651pt.
+ [6 <./yzplot5.png> <./yzplot6.png>] [7 <./yzplot7.png>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2434 strings out of 429018
- 28604 string characters out of 3167532
- 89598 words of memory out of 3000000
- 5665 multiletter control sequences out of 15000+200000
- 12780 words of font info for 43 fonts, out of 3000000 for 9000
- 912 hyphenation exceptions out of 8191
- 27i,9n,20p,877b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 3217 strings out of 493117
+ 43249 string characters out of 6135433
+ 113193 words of memory out of 5000000
+ 6592 multiletter control sequences out of 15000+600000
+ 20471 words of font info for 50 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,9n,23p,1217b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/lo
+cal/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on main.pdf (7 pages, 693571 bytes).
+PDF statistics:
+ 105 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on main.pdf (6 pages).
