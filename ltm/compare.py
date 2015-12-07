@@ -67,9 +67,9 @@ def compare(adjlist, threshold, trigger, low, high, size, times, debug=True):
 		print sum(influence)
 		print sum(integratedInfluence)
 
-		plt.plot(degree, label=('Top degree nodes'))
-		plt.plot(influence, label=('Top influence nodes'))
-		plt.plot(integratedInfluence, label=('Top integrated influence nodes'))
+		plt.plot(degree, label=('Top degree'))
+		plt.plot(influence, label=('Top sum influence'))
+		plt.plot(integratedInfluence, label=('Top cum influence'))
 		plt.xlabel('time')
 		plt.ylabel('# active nodes')
 		plt.legend()
@@ -78,23 +78,23 @@ def compare(adjlist, threshold, trigger, low, high, size, times, debug=True):
 	else:
 		return (sum(degree), sum(influence), sum(integratedInfluence))
 
-# compare(adjlist, 0.3, 1, 5, 15, 50, 10)
+# compare(adjlist, 0.3, 1, 5, 15, 10, 10)
 
 # thresholds = map(lambda x: x * 0.1, range(1, 9))
 # degree = []
 # influence = []
 # integratedInfluence = []
 # for threshold in thresholds:
-# 	res = compare(adjlist, threshold, 1, 5, 15, 10, 10, debug=False)
+# 	res = compare(adjlist, threshold, 1, 5, 15, 50, 10, debug=False)
 # 	degree.append(res[0])
 # 	influence.append(res[1])
 # 	integratedInfluence.append(res[2])
 
-# plt.plot(thresholds, degree, label=('Top degree nodes'))
-# plt.plot(thresholds, influence, label=('Top influence nodes'))
-# plt.plot(thresholds, integratedInfluence, label=('Top integrated influence nodes'))
+# plt.plot(thresholds, degree, label=('Top degree'))
+# plt.plot(thresholds, influence, label=('Top sum influence'))
+# plt.plot(thresholds, integratedInfluence, label=('Top cum influence'))
 # plt.xlabel('threshold')
-# plt.ylabel('# integrated active nodes')
+# plt.ylabel('integral of activated nodes')
 # plt.legend()
 # plt.grid(True)
 # plt.show()
@@ -104,16 +104,16 @@ degree = []
 influence = []
 integratedInfluence = []
 for size in initset_sizes:
-	res = compare(adjlist, 0.2, 1, 5, 15, size, 10, debug=False)
+	res = compare(adjlist, 0.5, 1, 5, 15, size, 10, debug=False)
 	degree.append(res[0])
 	influence.append(res[1])
 	integratedInfluence.append(res[2])
 
-plt.plot(initset_sizes, degree, label=('Top degree nodes'))
-plt.plot(initset_sizes, influence, label=('Top influence nodes'))
-plt.plot(initset_sizes, integratedInfluence, label=('Top integrated influence nodes'))
+plt.plot(initset_sizes, degree, label=('Top degree'))
+plt.plot(initset_sizes, influence, label=('Top sum influence'))
+plt.plot(initset_sizes, integratedInfluence, label=('Top cum influence'))
 plt.xlabel('init set size')
-plt.ylabel('# integrated active nodes')
+plt.ylabel('integral of activated nodes')
 plt.legend(loc='upper left')
 plt.grid(True)
 plt.show()
